@@ -76,14 +76,6 @@ items:
                       optional: true
               imagePullPolicy: Always
               name: mustachetemplate-controller
-              livenessProbe:
-                exec:
-                  command:
-                    - sh/liveness.sh
-                initialDelaySeconds: 30
-                periodSeconds: 150
-                timeoutSeconds: 30
-                failureThreshold: 1
               volumeMounts:
                 - mountPath: /home/node/config
                   name: razeedeploy-config
